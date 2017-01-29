@@ -4,7 +4,8 @@ $(document).ready(function() {
     var max_appointments   = 10;
 
 
-    var lead = 1;
+
+    var lead = 0;
     $('.add-lead').on('click', function(e) {
       e.preventDefault();
       if(lead < max_leads){
@@ -19,7 +20,7 @@ $(document).ready(function() {
       lead--;
     })
 
-    var call = 1;
+    var call = 0;
     $('.log-calls').on('click', function(e) {
       e.preventDefault();
       if(call < max_calls) {
@@ -35,7 +36,7 @@ $(document).ready(function() {
     })
 
 
-    var appointment = 1
+    var appointment = 0;
 
     $(function() {
       $('#datepicker').datepicker({
@@ -48,12 +49,19 @@ $(document).ready(function() {
       e.preventDefault();
       if(appointment < max_appointments){
         appointment++;
-        $('.appointment-container').append('<div><input class="appointment-dates hasDatepicker" id="datepicker" type="text" class="date-cal" placeholder="Pick a Date"/>&nbsp;<input type="text" id="alternate" size="30"><a href="#" class="remove_field">Delete</a></div>');
+        $('.appointment-fields').append('<div><input class="appointment-dates" id="datepicker'+appointment+'" type="text" class="date-cal" placeholder="Appointment"/>&nbsp;<input type="text" id="alternate'+appointment+'" size="30"><a href="#" class="remove_field">Delete</a></div>');
+        $('#datepicker'+appointment).datepicker({
+          altField: '#alternate',
+          altFormat: 'DD, d MM, yy'
+        });
+        $('#alternate'+appointment).datepicker({
+          altField: '#alternate',
+          altFormat: 'DD, d MM, yy'
+        });
       }
     });
 
-
-    $('.appointment-container').on('click','.remove_field', function(e){
+    $('.appointment-fields').on('click','.remove_field', function(e){
       e.preventDefault();
       $(this).parent('div').remove();
       appointment--;
