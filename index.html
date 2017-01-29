@@ -13,12 +13,21 @@
   </head>
   <body>
     <h1>CRM</h1>
+      <h2>Accounts</h2>
+        <div class="account-container">
+          <div class="account-input-fields">
+
+          </div>
+        </div>
+
       <h2>Leads</h2>
         <div class="lead-container">
           <button class="add-lead">Add a Lead</button><br>
           <div class="lead-input-fields">
             <input type="text" name="add-name" placeholder="Name">
             <input type="tel" name="add-number" placeholder="Telephone">
+            <button class="remove_field">Delete Lead</button>
+            <button class="add-account">Add to Account</button>
           </div>
         </div>
 
@@ -31,14 +40,16 @@
             <input type="date" name="add-date" placeholder="Date">
             <input type="text" name="add-agent" placeholder="Assigned To">
             <input type="textarea" name="add-notes" placeholder="Notes">
+            <button class="remove_field">Delete</button>
           </div>
         </div>
 
       <h2>Appointments</h2>
         <div class="appointment-container">
+          <button class="appointment">Schedule an Appointment</button><br>
           <div class="appointment-fields">
-            <button class="appointment">Schedule an Appointment</button><br>
             <input class="appointment-dates" id="datepicker" type="text" class="date-cal" placeholder="Appointment"/>&nbsp;<input type="text" id="alternate" size="30">
+            <button class="remove_field">Delete</button>
           </div>
         </div>
   </body>
