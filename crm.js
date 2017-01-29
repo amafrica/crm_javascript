@@ -51,11 +51,7 @@ $(document).ready(function() {
         appointment++;
         $('.appointment-fields').append('<div><input class="appointment-dates" id="datepicker'+appointment+'" type="text" class="date-cal" placeholder="Appointment"/>&nbsp;<input type="text" id="alternate'+appointment+'" size="30"><a href="#" class="remove_field">Delete</a></div>');
         $('#datepicker'+appointment).datepicker({
-          altField: '#alternate',
-          altFormat: 'DD, d MM, yy'
-        });
-        $('#alternate'+appointment).datepicker({
-          altField: '#alternate',
+          altField: '#alternate'+appointment,
           altFormat: 'DD, d MM, yy'
         });
       }
