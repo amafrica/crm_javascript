@@ -2,6 +2,7 @@ $(document).ready(function() {
     var max_leads          = 10;
     var max_calls          = 10;
     var max_appointments   = 10;
+    var max_accounts       = 10;
 
 
 
@@ -10,8 +11,32 @@ $(document).ready(function() {
       e.preventDefault();
       if(lead < max_leads){
         lead++;
-        $('.lead-container').append('<div><input type="text" name="add-name" placeholder="Name"/><input type="tel" name="add-number"placeholder="Telephone"/><button class="add-account">Add to Account</button><button class="remove_field">Delete Lead</button></div>');
+        $('.lead-container').append('<div><input type="text" id="lead-name'+lead+'" name="add-name" placeholder="Name"/><input type="tel" id="lead-tel'+lead+'" name="add-number"placeholder="Telephone"/><button class="remove_field">Delete Lead</button><button class="add-account">Add to Account</button></div>');
       }
+
+      var account = 0;
+
+      $('.add-account').on('click', function(e) {
+        e.preventDefault();
+        if(account < max_accounts) {
+          account++;
+
+          $(function appendLeadInfo() {
+            // $('.account-container').append('<div><input type="text" id="lead-name'+lead+'" value="" name="add-name" placeholder="Name"/><input type="tel" id="lead-tel'+lead+'" value="" name="add-number"placeholder="Telephone"/><button class="remove_field">Delete Account</button></div>');
+
+            $('.account-container').append('<div>' + $('#lead-name').val() + '<br>' + $('#lead-tel').val() + '<button class="remove_field">Delete Account</button></div>');
+          })
+          $('#lead-name'+lead).appendLeadInfo();
+          $('#lead-tel'+lead).appendLeadInfo();
+        }
+      });
+
+      $('.account-container').on('click','.remove_field', function(e){
+        e.preventDefault();
+        $(this).parent('div').remove();
+        account--;
+      })
+
     });
 
     $('.lead-container').on('click','.remove_field', function(e){
@@ -19,6 +44,8 @@ $(document).ready(function() {
       $(this).parent('div').remove();
       lead--;
     })
+
+
 
     var call = 0;
     $('.log-calls').on('click', function(e) {

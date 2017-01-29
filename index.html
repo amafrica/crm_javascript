@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Statflo CRM</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script> -->
 
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
@@ -24,8 +25,8 @@
         <div class="lead-container">
           <button class="add-lead">Add a Lead</button><br>
           <div class="lead-input-fields">
-            <input type="text" name="add-name" placeholder="Name">
-            <input type="tel" name="add-number" placeholder="Telephone">
+            <input type="text" id="lead-name" value="" name="add-name" placeholder="Name">
+            <input type="tel" id="lead-tel" value="" name="add-number" placeholder="Telephone">
             <button class="remove_field">Delete Lead</button>
             <button class="add-account">Add to Account</button>
           </div>
