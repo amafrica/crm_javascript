@@ -13,16 +13,24 @@
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <h1>CRM</h1>
-      <h2>Accounts</h2>
+      <!-- <h1 class="crm">CRM</h1> -->
+    <div class="sidebar-container">
+      <a href="#" class="account-sidebar">Accounts</a>
+      <a href="#" class="lead-sidebar">Leads</a>
+      <a href="#" class="log-sidebar">Logs</a>
+      <a href="#" class="appointment-sidebar">Appointments</a>
+    </div>
+
+    <div class="crm-elements-container">
         <div class="account-container">
+          <h2>Accounts</h2>
           <div class="account-input-fields">
 
           </div>
         </div>
 
-      <h2>Leads</h2>
         <div class="lead-container">
+          <h2>Leads</h2>
           <button class="add-lead">Add a Lead</button><br>
           <div class="lead-input-fields">
             <input type="text" id="lead-name" value="" name="add-name" placeholder="Name">
@@ -32,8 +40,8 @@
           </div>
         </div>
 
-      <h2>Calls</h2>
         <div class="calls-container">
+          <h2>Calls</h2>
           <button class="log-calls">Log a Call</button><br>
           <div class="log-input-fields">
             <input type="text" name="add-name" placeholder="Name">
@@ -45,13 +53,16 @@
           </div>
         </div>
 
-      <h2>Appointments</h2>
         <div class="appointment-container">
+          <h2>Appointments</h2>
           <button class="appointment">Schedule an Appointment</button><br>
           <div class="appointment-fields">
             <input class="appointment-dates" id="datepicker" type="text" class="date-cal" placeholder="Appointment"/>&nbsp;<input type="text" id="alternate" size="30">
             <button class="remove_field">Delete</button>
           </div>
         </div>
+    </div>
+
   </body>
+  <footer>&copy;CRM</footer>
 </html>

@@ -1,3 +1,75 @@
 * {
   font-family: Avenir Next !important;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  background-color: #F0F8FF;
+  height: 100%;
+}
+
+.crm-elements-container {
+  width: 65%;
+  /*display: flex;*/
+  justify-content: space-around;
+  align-items: center;
+  margin: auto
+}
+
+/*.sidebar-container {
+  background-color: #424d57;
+  width: 150px;
+  margin: 0;
+  align-items: center;
+  justify-content: space-around;
+}*/
+
+.sidebar-container{
+  background-color: #424d57;
+  width: 100%;
+  height: 75px;
+  margin: 0;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.account-sidebar, .lead-sidebar, .log-sidebar, .appointment-sidebar {
+  margin: 10px;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+h2 {
+  color: #6e8091;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.account-container, .lead-container, .calls-container, .appointment-container {
+  margin-top: 20px;
+  margin-bottom: 25px;
+}
+
+button {
+  padding: 3px;
+  margin: 1px;
+}
+
+
+footer {
+  text-align: center;
+  font-size: 1rem;
+  /*font-weight: lighter;*/
+  text-transform: uppercase;
+  color: #6e8091;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  background-color: #424d57;
 }

@@ -22,12 +22,10 @@ $(document).ready(function() {
           account++;
 
           $(function appendLeadInfo() {
-            // $('.account-container').append('<div><input type="text" id="lead-name'+lead+'" value="" name="add-name" placeholder="Name"/><input type="tel" id="lead-tel'+lead+'" value="" name="add-number"placeholder="Telephone"/><button class="remove_field">Delete Account</button></div>');
-
             $('.account-container').append('<div>' + $('#lead-name').val() + '<br>' + $('#lead-tel').val() + '<button class="remove_field">Delete Account</button></div>');
           })
-          $('#lead-name'+lead).appendLeadInfo();
-          $('#lead-tel'+lead).appendLeadInfo();
+          // $('#lead-name'+lead).appendLeadInfo();
+          // $('#lead-tel'+lead).appendLeadInfo();
         }
       });
 
