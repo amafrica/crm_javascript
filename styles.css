@@ -41,6 +41,12 @@ body {
   align-items: center;
   justify-content: space-around;
   float: left;
+  position: fixed;
+}
+
+.sidebar-elements {
+  position: relative;
+  margin-top: 50%;
 }
 
 .account-sidebar, .lead-sidebar, .log-sidebar, .appointment-sidebar {
@@ -50,6 +56,48 @@ body {
   text-transform: uppercase;
   display: block;
   margin-top: 25px;
+  /*position: absolute;*/
+}
+
+.lead-icon {
+  margin: auto;
+  align-items: center;
+  width: auto;
+  height: 80px;
+  margin-left: 18px;
+}
+
+.user-icon {
+  margin: auto;
+  align-items: center;
+  width: auto;
+  height: 80px;
+  justify-content: center;
+  margin-left: 25px;
+}
+
+.log-icon {
+  margin: auto;
+  align-items: center;
+  width: auto;
+  height: 75px;
+  justify-content: center;
+  margin-left: 25px;
+}
+
+.appointment-icon {
+  margin: auto;
+  align-items: center;
+  width: auto;
+  height: 70px;
+  justify-content: center;
+  margin-left: 30px;
+}
+
+p {
+  margin: auto;
+  text-align: center;
+  padding: 5px;
 }
 
 h2 {
@@ -64,7 +112,7 @@ h2 {
   margin-bottom: 45px;
   padding-top: 75px;
   padding-left: 30px;
-
+  margin-left: 75px;
 }
 
 .lead-to-account {
@@ -73,8 +121,9 @@ h2 {
 }
 
 button {
-  padding: 3px;
   margin: 1px;
+  padding: 3px;
+  padding-left: 5px;
 }
 
 
