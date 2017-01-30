@@ -126,6 +126,35 @@ button {
   padding-left: 5px;
 }
 
+#ui-datepicker-div {
+  background-color: #6e8091;
+  color: white;
+}
+
+.ui-state-default {
+  color: white;
+  text-align: center !important;
+  text-decoration: none;
+  padding: 5px;
+}
+
+.ui-datepicker-title {
+  text-align: center;
+}
+
+.ui-datepicker-month, .ui-datepicker-year {
+  margin: auto;
+  font-size: 25px;
+  padding: 5px;
+}
+
+.ui-icon-circle-triangle-w {
+  float: left;
+}
+
+.ui-icon-circle-triangle-e {
+  float: right;
+}
 
 footer {
   position: absolute;
