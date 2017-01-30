@@ -1,4 +1,25 @@
 $(document).ready(function() {
+
+  $('.account-container').hide();
+  $('.calls-container').hide();
+  $('.appointment-container').hide();
+
+  $('.account-sidebar').on('click', function() {
+    $('.account-container').toggle();
+  });
+
+  $('.lead-sidebar').on('click', function() {
+    $('.lead-container').toggle();
+  });
+
+  $('.log-sidebar').on('click', function() {
+    $('.calls-container').toggle();
+  });
+
+  $('.appointment-sidebar').on('click', function() {
+    $('.appointment-container').toggle();
+  })
+
     var max_leads          = 10;
     var max_calls          = 10;
     var max_appointments   = 10;
@@ -22,7 +43,7 @@ $(document).ready(function() {
           account++;
 
           $(function appendLeadInfo() {
-            $('.account-container').append('<div>' + $('#lead-name').val() + '<br>' + $('#lead-tel').val() + '<button class="remove_field">Delete Account</button></div>');
+            $('.account-container').append('<div class="lead-to-account">' + $('#lead-name').val() + ' | ' + $('#lead-tel').val() + '<button class="remove_field">Delete Account</button></div>');
           })
           // $('#lead-name'+lead).appendLeadInfo();
           // $('#lead-tel'+lead).appendLeadInfo();
@@ -87,6 +108,5 @@ $(document).ready(function() {
       $(this).parent('div').remove();
       appointment--;
     })
-
 
 });

@@ -12,6 +12,7 @@ html {
 body {
   background-color: #F0F8FF;
   height: 100%;
+  position: relative;
 }
 
 .crm-elements-container {
@@ -44,6 +45,7 @@ body {
   color: white;
   text-decoration: none;
   text-transform: uppercase;
+  display: inline-block;
 }
 
 h2 {
@@ -54,7 +56,12 @@ h2 {
 
 .account-container, .lead-container, .calls-container, .appointment-container {
   margin-top: 20px;
-  margin-bottom: 25px;
+  margin-bottom: 45px;
+}
+
+.lead-to-account {
+  color: #6e8091;
+  font-size: 20px;
 }
 
 button {
@@ -64,6 +71,8 @@ button {
 
 
 footer {
+  position: absolute;
+  width: 100%;
   text-align: center;
   font-size: 1rem;
   /*font-weight: lighter;*/
