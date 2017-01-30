@@ -107,10 +107,23 @@ h2 {
   text-transform: uppercase;
 }
 
+h3 {
+  color: #6e8091;
+  margin-top: 55px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+input {
+  border: none;
+  margin: 3px;
+  height: 20px;
+}
+
 .account-container, .lead-container, .calls-container, .appointment-container {
   position: relative;
   margin-bottom: 45px;
-  padding-top: 75px;
+  padding-top: 60px;
   padding-left: 30px;
   margin-left: 75px;
 }
@@ -124,6 +137,10 @@ button {
   margin: 1px;
   padding: 3px;
   padding-left: 5px;
+}
+
+.remove_field {
+  margin-left: 5px;
 }
 
 #ui-datepicker-div {
@@ -150,10 +167,12 @@ button {
 
 .ui-icon-circle-triangle-w {
   float: left;
+  padding: 5px;
 }
 
 .ui-icon-circle-triangle-e {
   float: right;
+  padding: 5px;
 }
 
 footer {

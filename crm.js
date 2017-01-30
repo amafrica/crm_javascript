@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-  $('.account-container').hide();
+  // $('.account-container').hide();
   $('.calls-container').hide();
   $('.appointment-container').hide();
 
@@ -25,6 +25,41 @@ $(document).ready(function() {
     var max_appointments   = 10;
     var max_accounts       = 10;
 
+    var account = 0;
+
+    $('.add-account').on('click', function(e) {
+      e.preventDefault();
+      if(account < max_accounts) {
+        account++;
+
+        $(function appendLeadInfo() {
+          $('.account-container').append('<div class="lead-to-account">' + $('#account-lead-name').val() + ' | ' + $('#account-lead-tel').val() + '<button class="remove_field">Delete Account</button></div>');
+        })
+
+        // $('#lead-name'+lead).appendLeadInfo();
+        // $('#lead-tel'+lead).appendLeadInfo();
+
+        // $('input:text').each(function() {
+        //   $(this).attr('value', $(this).val());
+        // });
+        //
+        // var lead_name_to_account = $('#lead-name:text').clone().appendTo('.account-input-fields');
+        // var lead_tel_to_account = $('#lead-tel:text').clone().appendTo('.account-input-fields');
+
+        // var lead_to_account = $(lead_name_to_account) + $(lead_tel_to_account).appendTo('.account-input-fields')
+
+        // $('.lead-input-fields').clone().appendTo('.account-input-fields').find(':tel').val('');
+        // var lead_values = $('#lead-name');
+        // lead_values.clone(true).replaceAll(lead_values).appendTo('.account-input-fields');
+
+      }
+    });
+
+    $('.account-container').on('click','.remove_field', function(e){
+      e.preventDefault();
+      $(this).parent('div').remove();
+      account--;
+    })
 
 
     var lead = 0;
@@ -32,29 +67,8 @@ $(document).ready(function() {
       e.preventDefault();
       if(lead < max_leads){
         lead++;
-        $('.lead-container').append('<div><input type="text" id="lead-name'+lead+'" name="add-name" placeholder="Name"/><input type="tel" id="lead-tel'+lead+'" name="add-number"placeholder="Telephone"/><button class="remove_field">Delete Lead</button><button class="add-account">Add to Account</button></div>');
+        $('.lead-input-fields').append('<div><input type="text" id="lead-name" name="add-name" placeholder="Name"/><input type="text" id="lead-tel" name="add-number"placeholder="Telephone"/><button class="remove_field">Delete Lead</button></div>');
       }
-
-      var account = 0;
-
-      $('.add-account').on('click', function(e) {
-        e.preventDefault();
-        if(account < max_accounts) {
-          account++;
-
-          $(function appendLeadInfo() {
-            $('.account-container').append('<div class="lead-to-account">' + $('#lead-name').val() + ' | ' + $('#lead-tel').val() + '<button class="remove_field">Delete Account</button></div>');
-          })
-          // $('#lead-name'+lead).appendLeadInfo();
-          // $('#lead-tel'+lead).appendLeadInfo();
-        }
-      });
-
-      $('.account-container').on('click','.remove_field', function(e){
-        e.preventDefault();
-        $(this).parent('div').remove();
-        account--;
-      })
 
     });
 
